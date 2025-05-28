@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Professional IT Audit Checklist (CISA-Based)</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f5f8fa;
+      margin: 0;
+      padding: 0 20px 40px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #004080, #0073e6);
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 1.1px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.15);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    marquee {
+      background-color: #004080;
+      color: white;
+      padding: 10px;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    nav {
+      background: #004080;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      padding: 12px 10px;
+      position: sticky;
+      top: 80px;
+      z-index: 999;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 0 0 8px 8px;
+      overflow-x: auto;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      white-space: nowrap;
+      user-select: none;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      background-color: #005bb5;
+      color: #ff9f1c;
+      box-shadow: inset 0 -3px 0 0 #ff9f1c;
+    }
+
+    #introduction {
+      background: #f5f8fc;
+      padding: 2em;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 123, 255, 0.1);
+      margin-bottom: 2em;
+    }
+
+    #introduction h2 {
+      font-size: 1.6em;
+      color: #004080;
+      border-bottom: 2px solid #007bff;
+      padding-bottom: 0.3em;
+      margin-bottom: 1em;
+      cursor: pointer;
+    }
+
+    #introduction ul {
+      margin-left: 1.5em;
+      list-style-type: square;
+      color: #333;
+    }
+
+    section {
+      background: white;
+      margin: 25px auto;
+      max-width: 900px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+      padding: 20px 30px 30px;
+      transition: transform 0.3s ease;
+    }
+
+    section:hover {
+      transform: translateY(-5px);
+    }
+
+    h2 {
+      font-weight: 700;
+      font-size: 1.4rem;
+      color: #004080;
+      margin: 0 0 15px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+      gap: 10px;
+    }
+
+    h2:hover {
+      color: #0073e6;
+    }
+
+    h2::after {
+      content: "▶";
+      display: inline-block;
+      margin-left: auto;
+      font-size: 1.2rem;
+      transition: transform 0.3s ease;
+      color: #0073e6;
+    }
+
+    h2.expanded::after {
+      transform: rotate(90deg);
+      color: #004080;
+    }
+
+    .content {
+      display: none;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease, padding 0.3s ease;
+    }
+
+    .content.expanded {
+      display: block;
+      max-height: 2000px;
+      padding-left: 10px;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 22px;
+      color: #222;
+    }
+
+    ul li {
+      margin-bottom: 15px;
+      font-size: 1rem;
+    }
+
+    ul li strong {
+      color: #003366;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+      margin-top: 40px;
+      padding-bottom: 20px;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 10px 15px 30px;
+      }
+      nav {
+        padding: 8px 5px;
+      }
+      section {
+        padding: 18px 20px 25px;
+      }
+      h2 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  SIMON NJOROGE Professional IT Audit Checklist (CISA-Based)
+  <br>
+  <marquee behavior="scroll" direction="left">
+    Ndakala Advisory LLP – IT Audit Associate Knowledgebase | Your centralized toolkit for secure, compliant, and efficient IT auditing
+  </marquee>
+</header>
+<nav></nav>
+<section id="introduction">
+  <h2 onclick="toggleSection(this)">Introduction</h2>
+  <div class="content">
+    <p>
+      From an IT expert's perspective, an IT audit for a SACCO serves as a critical assurance function to evaluate and strengthen the organization's technology posture.
+    </p>
+    <p>The primary goals of this audit are to:</p>
+    <ul>
+      <li>Ensure the confidentiality, integrity, and availability (CIA) of member and financial data.</li>
+      <li>Verify compliance with regulatory requirements such as CBK guidelines, Data Protection Act (Kenya), and ISACA standards.</li>
+      <li>Assess risk management effectiveness across IT infrastructure and operations.</li>
+      <li>Evaluate the maturity of SACCO's IT governance, security controls, and disaster preparedness.</li>
+      <li>Support strategic decision-making through identification of technology weaknesses and optimization opportunities.</li>
+    </ul>
+    <p>
+      This checklist is designed to guide auditors, IT managers, and SACCO stakeholders through a comprehensive and structured evaluation process.
+    </p>
+  </div>
+</section>
+
+<section id="requirements">
+  <h2 onclick="toggleSection(this)">IT Audit Requirements</h2>
+  <div class="content">
+    <p>
+      Before commencing the IT audit, ensure the following documentation and access rights are available to facilitate a smooth and thorough review:
+    </p>
+    <ul>
+      <li><strong>Organizational Structure:</strong> IT department organogram and reporting lines.</li>
+      <li><strong>IT Policies and Procedures:</strong> Security, acceptable use, backup, incident response, and change management.</li>
+      <li><strong>Network Diagram and Asset Inventory:</strong> Updated topology, IP schemes, hardware/software inventory.</li>
+      <li><strong>Access to Logs:</strong> System logs, firewall logs, antivirus, and SIEM data.</li>
+      <li><strong>Audit Trail of Core Banking System (CBS):</strong> Including changes, access attempts, and financial transactions.</li>
+      <li><strong>Change Management Records:</strong> Approved requests, testing outcomes, and rollback plans.</li>
+      <li><strong>Contracts and SLAs:</strong> For outsourced services (e.g., data center hosting, support vendors).</li>
+      <li><strong>Evidence of Staff Training:</strong> Cybersecurity, data protection, system usage.</li>
+      <li><strong>Prior Audit Reports:</strong> Internal and external audit findings and status of recommendations.</li>
+    </ul>
+  </div>
+</section>
+
+
+<section id="governance">
+  <h2 onclick="toggleSection(this)">1. Governance and Management of IT (CISA Domain: Governance & IT Management)</h2>
+  <div class="content">
+    <ul>
+      <li><strong>Documented IT Strategic Plan aligned with SACCO objectives</strong><br>Confirm IT strategy supports business goals like financial inclusion, member satisfaction, and mobile banking expansion.</li>
+      <li><strong>IT policies and procedures documented, reviewed, and approved</strong><br>Include acceptable use, password policy, BYOD, email policy, backup policy, and incident handling.</li>
+      <li><strong>IT organizational structure, roles, and responsibilities clearly defined</strong><br>Ensure clear separation between operations, development, and security roles (e.g., no system admin should be a teller).</li>
+      <li><strong>Formal IT steering committee or board-level oversight</strong><br>Review meeting minutes and decisions showing IT performance, risk management, and project alignment.</li>
+      <li><strong>Regulatory and legal compliance monitored (e.g., SASRA, Data Protection Act)</strong><br>Evidence of regular compliance audits and updates to accommodate changes in regulation.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="infrastructure">
+  <h2 onclick="toggleSection(this)">2. IT Infrastructure and Operations (CISA Domain 2: IT Infrastructure, Operations & Maintenance)</h2>
+  <div class="content">
+    <ul>
+      <li><strong>Up-to-date hardware/software inventory with asset tracking</strong><br>Include laptops, servers, routers, firewalls, mobile devices, and core banking software licenses.</li>
+      <li><strong>Network architecture and security configurations documented</strong><br>Include secure configurations of routers, firewalls, VPNs for branch interconnectivity.</li>
+      <li><strong>Patch and vulnerability management processes in place</strong><br>Confirm system updates are documented, automated where possible, and tested before deployment.</li>
+      <li><strong>Performance monitoring and capacity planning tools in use</strong><br>Assess whether systems can scale during peak times (e.g., dividend payouts, year-end closures).</li>
+      <li><strong>Job scheduling and batch processing controls implemented</strong><br>Especially relevant for . using legacy batch systems for overnight updates.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="security">
+  <h2 onclick="toggleSection(this)">3. Protection of Information Assets (Information Security) (CISA Domain 3)</h2>
+  <div class="content">
+    <ul>
+      <li><strong>Information security governance framework established</strong><br>Confirm existence of an ISMS (Information Security Management System) based on ISO/IEC 27001 or similar.</li>
+      <li><strong>Access controls (logical and physical) enforced</strong><br>Role-based access in the core banking system, secure authentication (MFA), and periodic access reviews.</li>
+      <li><strong>Security solutions implemented (Firewall, IDS/IPS, Antivirus, DLP)</strong><br>Must be active, licensed, and configured to alert or block anomalies.</li>
+      <li><strong>Data encryption (at rest and in transit) and masking techniques used</strong><br>Especially important for internet/mobile banking platforms and offsite backups.</li>
+      <li><strong>Incident response plan documented and tested</strong><br>Evidence of recent drills or real incidents managed successfully.</li>
+      <li><strong>User awareness and security training regularly conducted</strong><br>Including phishing simulation, social engineering awareness, and password hygiene.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="systems">
+  <h2 onclick="toggleSection(this)">4. Systems Development and Maintenance (CISA Domain 4)</h2>
+  <div class="content">
+    <ul>
+      <li><strong>Formal SDLC methodology adopted and enforced</strong><br>Review documented phases: requirements, design, development, testing, deployment, and maintenance.</li>
+      <li><strong>Change management and version control implemented</strong><br>Evidence of change requests, approvals, testing, and rollback procedures.</li>
+      <li><strong>Segregation of duties in development, testing, and production environments</strong><br>Developers should not deploy code directly to production.</li>
+      <li><strong>Penetration testing and code reviews regularly conducted</strong><br>Security vulnerabilities identified and remediated timely.</li>
+      <li><strong>System backups and rollback plans for new releases</strong><br>Ensure no disruption to SACCO operations during deployments.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="backup">
+  <h2 onclick="toggleSection(this)">5. Backup and Disaster Recovery (CISA Domain 5)</h2>
+  <div class="content">
+    <ul>
+      <li><strong>Backup policies defined, documented, and tested</strong><br>Regular full and incremental backups of core banking data, financial records, and member info.</li>
+      <li><strong>Offsite and secure storage of backups</strong><br>Including encrypted cloud storage or physical secure locations.</li>
+      <li><strong>Disaster recovery (DR) plan developed and tested</strong><br>Evidence of recent DR drills and updated recovery point/time objectives (RPO/RTO).</li>
+      <li><strong>Business continuity planning aligned with IT DR</strong><br>Clear roles, communication plans, and alternative work arrangements for SACCO staff.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="audit">
+  <h2 onclick="toggleSection(this)">6. Audit and Monitoring (CISA Domain 6)</h2>
+  <div class="content">
+    <ul>
+      <li><strong>Regular IT audits conducted with documented findings</strong><br>Internal audit, external auditors (e.g., KPMG, PWC), and follow-up actions tracked.</li>
+      <li><strong>Ensure logs are retained for regulatory requirements</strong><br>Often 5 years for financial records with protected log integrity.</li>
+      <li><strong>Internal and external audit reports reviewed and actioned</strong><br>Audit findings, risk registers, and remediation timelines tracked.</li>
+      <li><strong>Continuous monitoring tools and vulnerability scans used</strong><br>Automated security monitoring for network, application, and endpoint security.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="physical">
+  <h2 onclick="toggleSection(this)">7. Physical and Environmental Security (CISA Domain 2 & 3 Overlap)</h2>
+  <div class="content">
+    <ul>
+      <li><strong>Server rooms and data centers physically secured</strong><br>Access control, CCTV surveillance, and environmental controls (fire suppression, HVAC, humidity).</li>
+      <li><strong>Workstations secured and maintained</strong><br>Screen locks, antivirus updates, and clean desk policies in SACCO branches.</li>
+      <li><strong>Power backup and surge protection in place</strong><br>UPS systems, generators, and regular maintenance logs.</li>
+      <li><strong>Secure disposal of hardware and sensitive media</strong><br>Documented destruction/shredding of old drives, tapes, and printed financial reports.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="compliance">
+  <h2 onclick="toggleSection(this)">8. Compliance, Audit Trails & Documentation</h2>
+  <div class="content">
+    <ul>
+      <li><strong>Policies, procedures, and standards documented and accessible</strong><br>Include IT policies, code of conduct, and audit guidelines.</li>
+      <li><strong>Training records maintained for all IT personnel</strong><br>Security awareness, technical certifications, and compliance workshops.</li>
+      <li><strong>Third-party vendor management policies</strong><br>Contracts, SLAs, and security assessments of service providers.</li>
+      <li><strong>Regular review and update of IT controls</strong><br>Ensure controls remain effective with emerging risks and technology changes.</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 SACCO IT Audit Checklist | Prepared for Simon Njoroge Ndakala Advisory IT Audit Associate
+</footer>
+
+<script>
+  function toggleSection(header) {
+    const contentDiv = header.nextElementSibling;
+    if (!contentDiv) return;
+
+    // Toggle content display
+    if (contentDiv.classList.contains('expanded')) {
+      contentDiv.classList.remove('expanded');
+      header.classList.remove('expanded');
+    } else {
+      contentDiv.classList.add('expanded');
+      header.classList.add('expanded');
+      // Scroll smoothly to opened section on expand
+      header.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  // Optional: open all sections on load
+  // document.querySelectorAll('.content').forEach(c => c.classList.add('expanded'));
+  // document.querySelectorAll('h2').forEach(h => h.classList.add('expanded'));
+</script>
+
+</body>
+</html>
